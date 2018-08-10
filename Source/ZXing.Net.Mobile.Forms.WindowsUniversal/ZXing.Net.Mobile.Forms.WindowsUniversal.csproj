@@ -11,11 +11,12 @@
     <AssemblyName>ZXing.Net.Mobile.Forms.WindowsUniversal</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.14393.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <RuntimeIdentifiers>win10-arm;win10-arm-aot;win10-x86;win10-x86-aot;win10-x64;win10-x64-aot</RuntimeIdentifiers>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -103,10 +104,6 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="project.json" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="ZXingBarcodeImageViewRenderer.cs" />
     <Compile Include="ZXingScannerViewRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,7 +115,7 @@
       <Name>ZXing.Net.Mobile.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\ZXing.Net.Mobile.Forms\ZXing.Net.Mobile.Forms.csproj">
-      <Project>{8e54db74-c094-4016-859a-d1c7f2509a58}</Project>
+      <Project>{26ef018d-7f6e-4c59-ba41-ead4432c2a3f}</Project>
       <Name>ZXing.Net.Mobile.Forms</Name>
     </ProjectReference>
     <ProjectReference Include="..\ZXing.Net.Mobile.WindowsUniversal\ZXing.Net.Mobile.WindowsUniversal.csproj">
@@ -129,6 +126,14 @@
       <Project>{24b441f2-cbe9-4405-9fd0-72ebcbea0ec3}</Project>
       <Name>zxing.portable</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.1.7</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>3.2.0.637442-pre1</Version>
+    </PackageReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
